@@ -1,0 +1,40 @@
+﻿<Window x:Class="WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF"
+        mc:Ignorable="d"
+        Title="Vector Mathematics" Height="578" Width="1021">
+
+    <Window.DataContext>
+        <local:UserInputVM/>
+    </Window.DataContext>
+
+    <Grid x:Name="Vector_Mathematics">
+        <Label x:Name="v1" Content="Vector 1" HorizontalAlignment="Left" Margin="19,22,0,0" VerticalAlignment="Top" Width="145"/>
+        <Label x:Name="v2" Content="Vector 2" HorizontalAlignment="Left" Margin="19,147,0,0" VerticalAlignment="Top" Width="145"/>
+        <Label x:Name="V1_X" Content="X" HorizontalAlignment="Left" Margin="24,84,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="v1_x_value" HorizontalAlignment="Left" Height="26" Margin="45,87,0,0" TextWrapping="Wrap" Text= "{Binding V1_X, ValidatesOnExceptions=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{StaticResource errorTemplate}" VerticalAlignment="Top" Width="250"/>
+        <Label x:Name="V1_Y" Content="Y" HorizontalAlignment="Left" Margin="371,84,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="v1_y_value" HorizontalAlignment="Left" Height="26" Margin="393,84,0,0" TextWrapping="Wrap" Text= "{Binding V1_Y, ValidatesOnExceptions=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{StaticResource errorTemplate}" VerticalAlignment="Top" Width="250"/>
+        <Label x:Name="V1_Z" Content="Z" HorizontalAlignment="Left" Margin="712,84,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="v1_z_value" HorizontalAlignment="Left" Height="26" Margin="734,84,0,0" TextWrapping="Wrap" Text= "{Binding V1_Z, ValidatesOnExceptions=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{StaticResource errorTemplate}" VerticalAlignment="Top" Width="250"/>
+        <Label x:Name="V2_X" Content="X" HorizontalAlignment="Left" Margin="24,205,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.706,-0.077"/>
+        <TextBox x:Name="v2_x_value" HorizontalAlignment="Left" Height="26" Margin="45,205,0,0" TextWrapping="Wrap" Text= "{Binding V2_X, ValidatesOnExceptions=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{StaticResource errorTemplate}" VerticalAlignment="Top" Width="250"/>
+        <Label x:Name="V2_Y" Content="Y" HorizontalAlignment="Left" Margin="371,205,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.736,0.427"/>
+        <TextBox x:Name="v2_y_value" HorizontalAlignment="Left" Height="26" Margin="393,202,0,0" TextWrapping="Wrap" Text= "{Binding V2_Y, ValidatesOnExceptions=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{StaticResource errorTemplate}" VerticalAlignment="Top" Width="250"/>
+        <Label x:Name="V2_Z" Content="Z" HorizontalAlignment="Left" Margin="712,202,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.412,0.962"/>
+        <TextBox x:Name="v2_z_value" HorizontalAlignment="Left" Height="26" Margin="734,202,0,0" TextWrapping="Wrap" Text= "{Binding V2_Z, ValidatesOnExceptions=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{StaticResource errorTemplate}" VerticalAlignment="Top" Width="250"/>
+        <Button x:Name="CrossProduct" Content="Calculate Cross Product" HorizontalAlignment="Left" Margin="393,300,0,0" VerticalAlignment="Top" Width="250" Click="CrossProduct_Click" RenderTransformOrigin="0.493,-4.35" Height="24"/>
+        <Label x:Name="v3" Content="Resultant Vector" HorizontalAlignment="Left" Margin="24,331,0,0" VerticalAlignment="Top" Width="145"/>
+        <Label x:Name="V3_X" Content="X" HorizontalAlignment="Left" Margin="24,384,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.706,-0.077"/>
+        <TextBox x:Name="v3_x_value" HorizontalAlignment="Left" Height="23" Margin="45,387,0,0" TextWrapping="Wrap" Text= "" VerticalAlignment="Top" Width="250" RenderTransformOrigin="0.492,1.304"/>
+        <Label x:Name="V3_Y" Content="Y" HorizontalAlignment="Left" Margin="371,384,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.736,0.427"/>
+        <TextBox x:Name="v3_y_value" HorizontalAlignment="Left" Height="23" Margin="393,387,0,0" TextWrapping="Wrap" Text= "" VerticalAlignment="Top" Width="250"/>
+        <Label x:Name="V3_Z" Content="Z" HorizontalAlignment="Left" Margin="712,384,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.412,0.962"/>
+        <TextBox x:Name="v3_z_value" HorizontalAlignment="Left" Height="23" Margin="734,387,0,0" TextWrapping="Wrap" Text= "" VerticalAlignment="Top" Width="250"/>
+        <Button x:Name="Restart" Content="Clear text and Restart" HorizontalAlignment="Left" Margin="393,473,0,0" VerticalAlignment="Top" Width="250" Click="ClearTextAndRestart_Click" RenderTransformOrigin="0.493,-4.35" Height="26"/>
+
+    </Grid>
+</Window>
