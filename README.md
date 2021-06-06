@@ -21,5 +21,5 @@ responsible for performing all the basic vector operations such as
 * UI: A basic desktop application capable of taking two vectors and input from the user
 and calculate the cross product of the two vectors and return the resultant vector components.
 
-Note: The user may have to enable the library reference in Test and UI projects if it is not enabled. 
+Note: The user may have to enable the Library reference in Test and UI projects if it is not enabled. 
 In addition to that the user has to set UI as the start up project to avoid any errors while running the solution.
